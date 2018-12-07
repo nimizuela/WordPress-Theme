@@ -119,11 +119,11 @@ input, select, textarea {
 		text-decoration: none;
 	}
 
-		a:hover {
-			border-bottom-color: transparent;
-			color: #9c58cc !important;
-			text-decoration: none;
-		}
+	a:hover {
+		border-bottom-color: transparent;
+		color: #9c58cc !important;
+		text-decoration: none;
+	}
 
 	strong, b {
 		color: #707070;
@@ -2628,6 +2628,11 @@ input, select, textarea {
 			margin: 0 0 1em 0;
 			width: 10em;
 		}
+
+		#header li {
+			background-color: greenyellow !important;
+		}
+
 
 /* Footer */
 

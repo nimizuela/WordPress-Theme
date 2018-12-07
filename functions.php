@@ -16,7 +16,7 @@ add_action('init', function() {
 	pll_register_string('mytheme-next-post', 'Next');
 
 	/* Register the navigation menu. */
-	register_nav_menu( 'primary', 'Primary Menu' );
+	register_nav_menu( 'primary', 'Primary Navigation' );
 
 	/* Register the 'primary' sidebar. */
 	register_sidebar(
