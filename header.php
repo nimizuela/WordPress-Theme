@@ -6,10 +6,9 @@
 -->
 <html lang="es">
 	<head>
-		<title>Proyecto Nimizuela</title>
+		<title><?php bloginfo('name'); ?></title>
 <meta charset="utf-8" />
-<meta name="description" content="Proyecto Nimizuela …dando a conocer Nimiq en Venezuela
-" />
+<meta name="description" content="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 <!--[if lte IE 8]><script src="<?=get_template_directory_uri();?>/assets/js/ie/html5shiv.js"></script><![endif]-->
 <link rel="stylesheet" href="<?=get_template_directory_uri();?>/assets/css/main.css" />
@@ -38,24 +37,42 @@
 		
 		<!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="Proyecto Nimizuela" />
-<meta property="og:description" content="Proyecto Nimizuela …dando a conocer Nimiq en Venezuela
-" />
-<meta property="og:site_name" content="Proyecto Nimizuela" />
+<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+<meta property="og:description" content="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
+<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 <meta property="og:url" content="/es/blog.html" />
 <meta property="og:image" content="<?=get_template_directory_uri();?>/images/logo.png" />
 		
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nimizuela" />
-<meta name="twitter:title" content="Proyecto Nimizuela" />
-<meta name="twitter:description" content="Proyecto Nimizuela …dando a conocer Nimiq en Venezuela
-" />
+<meta name="twitter:title" content="<?php bloginfo('name'); ?>" />
+<meta name="twitter:description" content="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
 <meta name="twitter:image" content="<?=get_template_directory_uri();?>/images/logo.png" />
 
 
 	</head>
 	<body class="is-preload">
+
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '644672675906757',
+			xfbml      : true,
+			version    : 'v3.1'
+		});	
+	FB.AppEvents.logPageView();	
+	};
+	  
+	(function(d, s, id){
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) {return;}
+	js = d.createElement(s); js.id = id;
+	js.src = "https://connect.facebook.net/<?php echo substr(get_bloginfo('language'), 0, 2) == 'es' ? 'es_LA' : 'en_US'; ?>/sdk.js";
+	fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+
 		<script>
 			if ((location.pathname + location.search).startsWith("/?address=")) {
 				location.replace(location.href.replace("/?address=", "/paynt/?address="));
@@ -66,7 +83,7 @@
 	<header id="header">
 		<div class="inner">
 			<a href="<?php echo home_url(); ?>" class="image logo"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
-			<h1><strong><?php echo bloginfo('name'); ?></strong><br /> <em><?php pll_e('Desription Line 1'); ?><br><?php pll_e('Desription Line 2'); ?></em></strong></h1>
+			<h1><strong><?php bloginfo('name'); ?></strong><br /> <em><?php pll_e('Desription Line 1'); ?><br><?php pll_e('Desription Line 2'); ?></em></strong></h1>
 			<?php wp_nav_menu( array(
 				'theme_location'  => 'primary',
 				'menu'            => '',
