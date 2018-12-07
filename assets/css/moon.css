@@ -1,0 +1,158 @@
+/* //// Reset //// */
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing : border-box;
+	   -moz-box-sizing : border-box;
+			box-sizing : border-box;
+}
+
+* {
+	margin  : 0;
+	padding : 0;
+}
+
+/* //// Layout //// */
+
+/* Main */
+
+html,
+body,
+.wrapper-page,
+.page-main,
+.js-flag-canvas {
+	width    : 100%;
+	height   : 100%;
+	overflow : hidden;
+}
+
+html,
+body {
+	background-color : #222222;
+}
+
+/* //// Typography and Style //// */
+
+body {
+	color: white;
+	font-family : 'Open Sans', Helvetica, Arial, sans-serif;
+	font-size   : 18pt;
+	line-height : 18pt;
+	text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+}
+
+h1, h2, h3, h4, h5, h6,
+p, a {
+	color       : white;
+	margin-bottom: 0.5em;
+}
+
+a {
+	border-bottom: 1px dotted white;
+	text-decoration: none;
+}
+
+a:hover {
+	border-bottom: none;
+	color: rgba(248, 225, 150, 1);
+}
+
+ul#language-selector li {
+	list-style: none;
+	list-style-type: none;
+	line-height : 30pt;
+}
+
+.header {
+	background: linear-gradient(to bottom,  rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0) 100%);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	text-align: center;
+	padding-bottom: 2em;
+}
+
+.menu {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+#faucet {
+	font-size: 0.8em;
+	padding: 0.2em 0 0.2em 0;
+	display: inline-block;
+}
+
+#addr {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid #ffc302;
+	color: #ffc302;
+	text-align: center;
+	display:table-cell;
+	width: 100%;
+}
+
+::placeholder {
+	color: #ffc302;
+	opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #ffc302;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #ffc302;
+}
+
+.btn {
+	font: 1rem 'Fira Sans', sans-serif;
+	padding: .5rem;
+	background-color: #ffc302;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	margin: 4px;
+	font-weight: bolder;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 1);
+	width: 100%;
+}
+
+.center-recaptcha {
+	text-align: center;
+	padding-top: 15px;
+}
+
+.g-recaptcha {
+	display: inline-block;
+}
+
+input[type="text"] {
+	font-size: 0.8em;
+}
+
+/* //// Background Image //// */
+
+.bg-picture {
+	background-attachment : fixed;
+	background-image      : url('../../images/moon-landing-640x480px.jpg');
+	background-position   : center center;
+	background-repeat     : no-repeat;
+	background-size       : cover;
+}
+
+@media only screen and (min-width : 480px) {
+	.bg-picture {
+		background-image : url('../../images/moon-landing-800x600px.jpg');
+	}
+}
+
+@media only screen and (min-width : 800px) {
+	.bg-picture {
+		background-image : url('../../images/moon-landing-1600x1200px.jpg');
+	}
+}
