@@ -3,22 +3,22 @@
 
 <?php if ( have_posts() ) : ?>
 <?php while ( have_posts() ) : the_post(); ?>
-  <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <div class="post-header">
-       <div class="date"><?php the_time( 'M j y' ); ?></div>
-       <h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-       <div class="author"><?php the_author(); ?></div>
-    </div><!--end post header-->
-    <div class="entry clear">
-       <?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?>
-       <?php the_excerpt(); ?>
-       <?php edit_post_link(); ?>
-       <?php wp_link_pages(); ?> </div>
-    <!--end entry-->
-    <div class="post-footer">
-       <div class="comments"><?php comments_popup_link( 'Leave a Comment', '1 Comment', '% Comments' ); ?></div>
-    </div><!--end post footer-->
-    </div><!--end post-->
+		<section class="post-container">
+			<div class="post-thumb"><?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?></div>
+			<div class="post-content">
+				<i class="post-pin fa fa-thumb-tack"></i>
+				<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<div>
+					<?php the_excerpt(); ?>
+				</div>
+				<p>
+					<span><i class="fa fa-calendar"></i>
+					<span class="postedago" datetime=""></span><?php the_time(); ?></span>
+					<span><?php edit_post_link(); ?></i>
+					<span><?php wp_link_pages(); ?></i>
+				</p>
+			</div>
+		</section>
 <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
     <div class="navigation index">
        <div class="alignleft"><?php next_posts_link( 'Older Entries' ); ?></div>
@@ -40,16 +40,7 @@
 				</div>
 				<p>
 					<span><i class="fa fa-calendar"></i> 
-<span class="postedago" datetime="2018-08-09T00:00:00+03:00"></span>
-
-9
-de Agosto
-2018
- 
-	
-	
-
-</span>
+					<span class="postedago" datetime="2018-08-09T00:00:00+03:00"></span>9 de Agosto 2018</span>
 				</p>
 			</div>
 		</section>
