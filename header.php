@@ -62,53 +62,36 @@
 			}
 		</script>
 
-		<script type="text/javascript">
-	datedata = {
-		since_date: 'Hace',
-		time_ago: '',
-		on_date: 'el',
-		year: 'año',
-		years: 'años',
-		month: 'mes',
-		months: 'meses',
-		day: 'día',
-		days: 'días',
-		hour: 'hora',
-		hours: 'horas',
-		minute: 'minuto',
-		minutes: 'minutos',
-		second: 'segundo',
-		seconds: 'segundos'
-	};
-</script>
-
 		<!-- Header -->
 	<header id="header">
 		<div class="inner">
-			<a href="/es/blog.html" class="image logo"><img src="<?=get_template_directory_uri();?>/images/logo.png" alt="" /></a>
-			<h1><strong>Proyecto Nimizuela</strong><br /> <em>…dando a conocer</em><br /> <strong><em>Nimiq</em></strong> <em>en</em> <strong><em>Venezuela</em></strong>
-</h1>
+			<a href="<?php echo home_url(); ?>" class="image logo"><img src="<?php echo get_template_directory_uri();?>/images/logo.png" alt="" /></a>
+			<h1><strong><?php echo bloginfo('name'); ?></strong><br /> <em><?php pll_e('Desription Line 1'); ?><br><?php pll_e('Desription Line 2'); ?></em></strong></h1>
+			<?php wp_nav_menu( array(
+				'theme_location'  => 'primary',
+				'menu'            => '',
+				'container'       => 'div',
+				'container_class' => '',
+				'container_id'    => '',
+				'menu_class'      => 'menu',
+				'menu_id'         => '',
+				'echo'            => true,
+				'fallback_cb'     => 'wp_page_menu',
+				'before'          => '',
+				'after'           => '',
+				'link_before'     => '',
+				'link_after'      => '',
+				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+				'depth'           => 0,
+				'walker'          => ''
+			)); ?>
 		</div>
 	</header>
 
 
 		<div id=lang-selector>
-	<ul>
-		
-		
-	
-		
-		
-			
-			<li>
-				<a href="/blog.html" class="en">English</a>
-			</li>
-			
-		
-			
-		
-	</ul>
-</div>
+			<?php dynamic_sidebar('primary'); ?>
+		</div>
 
 
 		<!-- Main -->
