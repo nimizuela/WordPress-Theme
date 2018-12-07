@@ -2629,8 +2629,12 @@ input, select, textarea {
 			width: 10em;
 		}
 
-		#header li {
-			background-color: greenyellow !important;
+		#header > .inner li a {
+			color: rgba(248, 225, 150, 0.9) !important;
+		}
+
+		#header > .inner ul {
+			list-style-type: none;
 		}
 
 

@@ -16,6 +16,10 @@
 		</div>
 	</footer>
 
+	<div>
+		<?php wp_footer(); ?>
+	</div>
+	
 		<!-- Scripts -->
 	<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="<?=get_template_directory_uri();?>/assets/js/jquery.min.js"></script>
 	<script src="<?=get_template_directory_uri();?>/assets/js/jquery.poptrox.min.js"></script>
