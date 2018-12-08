@@ -125,8 +125,8 @@
 		</section>
 <?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
     <div class="navigation index">
-       <div class="alignleft"><?php next_posts_link( 'Older Entries' ); ?></div>
-       <div class="alignright"><?php previous_posts_link( 'Newer Entries' ); ?></div>
+       <div class="alignleft"><?php next_posts_link( pll__('Older Entries') ); ?></div>
+       <div class="alignright"><?php previous_posts_link( pll__('Newer Entries') ); ?></div>
     </div><!--end navigation-->
 <?php else : ?>
 <?php endif; ?>

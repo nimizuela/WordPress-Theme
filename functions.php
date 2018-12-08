@@ -14,6 +14,8 @@ add_action('init', function() {
 	pll_register_string('mytheme-design', 'Design');
 	pll_register_string('mytheme-previous-post', 'Previous');
 	pll_register_string('mytheme-next-post', 'Next');
+	pll_register_string('mytheme-older-entries', 'Older Entries');
+	pll_register_string('mytheme-newer-entries', 'Newer Entries');
 
 	/* Register the navigation menu. */
 	register_nav_menu( 'primary', 'Primary Navigation' );
