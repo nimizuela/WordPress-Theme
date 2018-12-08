@@ -1,4 +1,9 @@
+<?php if ( is_front_page() ) : ?>
+<?php include path_join(get_template_directory(), 'landing.php'); ?>
+<?php else : ?>
+
 <?php get_header(); ?>
+
 				<!-- This loops through the paginated posts -->
 
 <?php if ( is_page() || is_single() ) : the_post(); ?>
@@ -133,6 +138,7 @@
 
 <?php endif; ?>
 
-
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>
+
+<?php endif; ?>

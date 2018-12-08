@@ -983,7 +983,7 @@
 		var backgroundMesh = new THREE.Mesh(
 			new THREE.PlaneGeometry(356.36, 263.14, 0),
 			new THREE.MeshBasicMaterial({
-				map: THREE.ImageUtils.loadTexture( 'images/patch.png', {}, function() { backgroundMesh.visible = true; } )
+				map: THREE.ImageUtils.loadTexture( template_directory_uri + '/images/patch.png', {}, function() { backgroundMesh.visible = true; } )
 			}));
 
 		backgroundMesh.visible= false;
@@ -1015,7 +1015,7 @@
 		var crosshairMesh = new THREE.Mesh(
 			new THREE.PlaneGeometry(scale * 72, scale * 70, 0),
 			new THREE.MeshBasicMaterial({
-				map: THREE.ImageUtils.loadTexture( 'images/crosshair.png', {}, function() { crosshairMesh.visible = true; } ),
+				map: THREE.ImageUtils.loadTexture( template_directory_uri + '/images/crosshair.png', {}, function() { crosshairMesh.visible = true; } ),
 				transparent: true,
 				opacity: 1
 			}));
@@ -1153,7 +1153,7 @@
 		// Load settings from hash vars on page load
 		publicFlag.setOpts( {
 			imgUploadMode : 'web',
-			imgSrc        : 'images/flag.png',
+			imgSrc        : template_directory_uri + '/images/flag.png',
 			imgFilePath   : '',
 			hoisting      : 'dexter',
 			topEdge       : 'top'
