@@ -35,4 +35,9 @@ add_action('init', function() {
 add_filter( 'excerpt_length', function ( $length ) {
     return 20;
 }, 55 );
+
+/*  Excerpt ending */
+add_filter( 'excerpt_more', function ( $more ) {
+	return '&#46;&#46;&#46;';
+});
 ?>
