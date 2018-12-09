@@ -1,4 +1,5 @@
 <?php
+
 add_theme_support( 'post-thumbnails' );
 
 add_action('init', function() {
@@ -47,4 +48,16 @@ add_filter( 'excerpt_length', function ( $length ) {
 add_filter( 'excerpt_more', function ( $more ) {
 	return '&#46;&#46;&#46;';
 });
+
+/* Exclude current page or post from the menu */
+add_filter( 'wp_get_nav_menu_items', function ( $items, $menu, $args ) {
+	global $post;
+	if (is_object($post)) {
+		foreach ( $items as $key => $item ) {
+			if ( $item->object_id == $post->ID ) unset( $items[$key] );
+		}	
+	}
+    return $items;
+}, null, 3 );
+
 ?>

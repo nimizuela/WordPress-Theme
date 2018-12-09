@@ -74,10 +74,16 @@ ul#language-selector li {
 	padding-bottom: 2em;
 }
 
-.menu {
+.menu-container {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+}
+
+.menu {
+	list-style-type: none;
+	padding-left: 0.75em;
+	line-height: 1.25em;
 }
 
 #faucet {

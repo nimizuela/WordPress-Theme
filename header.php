@@ -84,32 +84,15 @@
 		<div class="inner">
 			<a href="<?= home_url(); ?>" class="image logo"><img src="<?= get_template_directory_uri(); ?>/images/logo.png" alt="" /></a>
 			<h1><strong><?= get_bloginfo('name'); ?></strong><br /> <em><?= pll__('Desription Line 1'); ?><br><?= pll__('Desription Line 2'); ?></em></strong></h1>
-			<?php wp_nav_menu( array(
-				'theme_location'  => 'primary',
-				'menu'            => '',
-				'container'       => 'div',
-				'container_class' => '',
-				'container_id'    => '',
-				'menu_class'      => 'menu',
-				'menu_id'         => '',
-				'echo'            => true,
-				'fallback_cb'     => 'wp_page_menu',
-				'before'          => '',
-				'after'           => '',
-				'link_before'     => '',
-				'link_after'      => '',
-				'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-				'depth'           => 0,
-				'walker'          => ''
-			)); ?>
+			<?php wp_nav_menu( array('theme_location'  => 'primary')); ?>
 		</div>
 	</header>
 
-
+		<!--
 		<div id=lang-selector>
 			<?php dynamic_sidebar('primary'); ?>
 		</div>
-
+		-->
 
 		<!-- Main -->
 			<div id="main">

@@ -23,10 +23,11 @@
 			</div>
 		</section>
 	<?php endwhile; /* rewind or continue if all posts have been fetched */ ?>
+	<hr />
 	<!--start navigation-->
-    <div class="navigation index">
-       <div class="alignleft"><?php next_posts_link( pll__('Older Entries') ); ?></div>
-       <div class="alignright"><?php previous_posts_link( pll__('Newer Entries') ); ?></div>
+    <div class="nav-posts">
+       <div class="nav-posts-left"><?php next_posts_link( pll__('Older Entries') ); ?></div>
+       <div class="nav-posts-right"><?php previous_posts_link( pll__('Newer Entries') ); ?></div>
     </div>
 	<!--end navigation-->
 <?php else : ?>

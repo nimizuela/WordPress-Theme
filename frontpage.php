@@ -74,12 +74,9 @@
 -->
 			</div>
 		</div>
-		<div class="menu">
+		<div class="menu-container">
 			<h2><?= pll__('Title Line 1'); ?></h2><h2><?= pll__('Title Line 2'); ?></h2>
-			<ul id="language-selector">
-				<li><a href="<?= get_bloginfo('url'); ?>/blog/">Español</a></li>
-				<li><a href="<?= get_bloginfo('url'); ?>/en/blog-2/">English</a></li>
-			</ul>
+			<?php wp_nav_menu( array('theme_location'  => 'primary')); ?>
 		</div>
 		<div>
 			<?php wp_footer(); ?>
