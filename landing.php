@@ -51,8 +51,8 @@
 		<div class="header">
 			<div id="faucet" style="display: none;">
 				<div id="follow">
-					¡<a href="https://faucet.nimizuela.tk">Síguenos en Twitter</a> y consigue NIM gratis!<br>
-					<a href="https://nimizuela.org/es/2018/08/04/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web.html" target="_blank">...o crea una cuenta Nimiq para recibirlos si aún no la tienes.</a>
+					<a href="https://faucet.nimizuela.tk"><?= pll__('Follow us on Twitter'); ?></a> <?= pll__('and get free NIM!'); ?><br>
+					<a href="https://nimizuela.org/es/2018/08/04/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web.html" target="_blank"><?= pll__('...or create a Nimiq account to receive them if you haven\'t done so.'); ?></a>
 				</div>
 <!--
 				<div id="follow">

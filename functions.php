@@ -18,6 +18,9 @@ add_action('init', function() {
 	pll_register_string('mytheme-next-post', 'Next');
 	pll_register_string('mytheme-older-entries', 'Older Entries');
 	pll_register_string('mytheme-newer-entries', 'Newer Entries');
+	pll_register_string('mytheme-follo-us', 'Follow us on Twitter');
+	pll_register_string('mytheme-get-free-nim', 'and get free NIM!');
+	pll_register_string('mytheme-or-create-account', '...or create a Nimiq account to receive them if you haven\'t done so.');
 
 	/* Register the navigation menu. */
 	register_nav_menu( 'primary', 'Primary Navigation' );
