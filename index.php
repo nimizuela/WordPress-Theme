@@ -13,21 +13,21 @@
 				<p>
 					<i class="fa fa-calendar"></i>
 					<span>
-						<?php pll_e('Since'); ?>
-						<?php echo human_time_diff(get_the_time('U'), current_time('timestamp')); ?>
-						<?php pll_e('ago'); ?>
-						<?php pll_e('on'); ?>
+						<?= pll__('Since'); ?>
+						<?= human_time_diff(get_the_time('U'), current_time('timestamp')); ?>
+						<?= pll__('ago'); ?>
+						<?= pll__('on'); ?>
 						<?php the_date(); ?>
 					</span>
 					<ul class="icons">
 						<li>
-							<a href="https://www.facebook.com/sharer/sharer.php?u=<?php echo urlencode(the_permalink()); ?>&display=popup&ref=plugin&app_id=644672675906757" class="icon fa-facebook" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label"><?php pll_e('Share via'); ?> Facebook</span></a>
+							<a href="https://www.facebook.com/sharer/sharer.php?u=<?= urlencode(the_permalink()); ?>&display=popup&ref=plugin&app_id=644672675906757" class="icon fa-facebook" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label"><?= pll__('Share via'); ?> Facebook</span></a>
 						</li>
 						<li>
-							<a href="https://twitter.com/intent/tweet?via=nimizuela&url=<?php echo urlencode(the_permalink()); ?>&text=<?php echo urlencode(the_title()); ?>" class="icon fa-twitter" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label"><?php pll_e('Share via'); ?> Twitter</span></a>
+							<a href="https://twitter.com/intent/tweet?via=nimizuela&url=<?= urlencode(the_permalink()); ?>&text=<?= urlencode(the_title()); ?>" class="icon fa-twitter" target="_blank" onclick="javascript:window.open(this.href, '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=300,width=600');return false;"><span class="label"><?= pll__('Share via'); ?> Twitter</span></a>
 						</li>
 						<li>
-							<a href="mailto:?subject=<?php pll_e('I wanted you to see this site'); ?>&amp;body=<?php pll_e('Check out this site'); ?>&nbsp;<?php the_permalink(); ?>" class="icon fa-envelope-o"><span class="label"><?php pll_e('Share via'); ?> Email</span></a>
+							<a href="mailto:?subject=<?= pll__('I wanted you to see this site'); ?>&amp;body=<?= pll__('Check out this site'); ?>&nbsp;<?php the_permalink(); ?>" class="icon fa-envelope-o"><span class="label"><?= pll__('Share via'); ?> Email</span></a>
 						</li>
 						<li>
 							<div class="fb-like" data-href="<?php the_permalink(); ?>" data-layout="button_count" data-action="like" data-size="large"></div>
@@ -41,10 +41,10 @@
 			</section>
 		</article>
 
-		
+
 		<div class="fb-comments" data-href="<?php the_permalink(); ?>" data-colorscheme="light" data-num-posts="4" data-width="100%">
 		</div>
-	
+
 	<?php
 		$prevPost = get_previous_post(true);
 		$nextPost = get_next_post(true);
@@ -54,7 +54,7 @@
 		<hr />
 		<div class="row">
 			<article class="col-6 col-12-xsmall work-item">
-				
+
 	<?php
         if($prevPost) {
             $args = array(
@@ -65,8 +65,8 @@
             foreach ($prevPost as $post) {
                 setup_postdata($post);
 	?>
-	
-				<p><?php pll_e('Previous'); ?></p>
+
+				<p><?= pll__('Previous'); ?></p>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<p><?php the_excerpt(); ?></p>
 
@@ -74,12 +74,12 @@
                 wp_reset_postdata();
             } //end foreach
 		} // end if
-	?>				
+	?>
 
 
 			</article>
 			<article class="col-6 col-12-xsmall work-item">
-				
+
 	<?php
         if($nextPost) {
             $args = array(
@@ -90,16 +90,16 @@
             foreach ($nextPost as $post) {
                 setup_postdata($post);
 	?>
-				<p><?php pll_e('Next'); ?></p>
+				<p><?= pll__('Next'); ?></p>
 				<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
 				<p><?php the_excerpt(); ?></p>
-	
+
     <?php
                 wp_reset_postdata();
             } //end foreach
         } // end if
     ?>
-				
+
 			</article>
 		</div>
 		<?php endif; ?>
@@ -117,10 +117,10 @@
 				<p>
 					<span><i class="fa fa-calendar"></i>
 					<span>
-						<?php pll_e('Since'); ?>
-						<?php echo human_time_diff(get_the_time('U'), current_time('timestamp')); ?>
-						<?php pll_e('ago'); ?>
-						<?php pll_e('on'); ?>
+						<?= pll__('Since'); ?>
+						<?= human_time_diff(get_the_time('U'), current_time('timestamp')); ?>
+						<?= pll__('ago'); ?>
+						<?= pll__('on'); ?>
 						<?php the_date(); ?>
 					</span>
 					<span><?php edit_post_link(); ?></i>

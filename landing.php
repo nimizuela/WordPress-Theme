@@ -6,31 +6,31 @@
 		<meta name="viewport"	content="width=device-width, initial-scale=1" />
 		<meta name="description" content="...dando a conocer Nimiq en Venezuela" />
 		<!--<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">-->
-		<title><?php bloginfo('name'); ?></title>
+		<title><?= get_bloginfo('name'); ?></title>
 		<!-- Libraries -->
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/jquery.min.js"></script>
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/three.min.js"></script>
+		<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/three.min.js"></script>
 		<script type="text/javascript" src='https://www.google.com/recaptcha/api.js?hl=es-419'></script>
 		<!-- Main -->
-		<link type="text/css" rel="stylesheet" href="<?php echo get_template_directory_uri();?>/assets/css/moon.css" />
-		<script type="text/javascript" src="<?php echo get_template_directory_uri();?>/assets/js/moon.js"></script>
+		<link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/moon.css" />
+		<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/moon.js"></script>
 		<!-- Analytics -->
 
 		<!-- Socials -->
 		<!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:title" content="<?php bloginfo('name'); ?>" />
-<meta property="og:description" content="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
-<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+<meta property="og:title" content="<?= get_bloginfo('name'); ?>" />
+<meta property="og:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
+<meta property="og:site_name" content="<?= get_bloginfo('name'); ?>" />
 <meta property="og:url" content="/" />
-<meta property="og:image" content="<?php echo get_template_directory_uri();?>/images/moon.png" />
+<meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/moon.png" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nimizuela" />
-<meta name="twitter:title" content="<?php bloginfo('name'); ?>" />
-<meta name="twitter:description" content="<?php bloginfo('name'); ?> <?php bloginfo('description'); ?>" />
-<meta name="twitter:image" content="<?php echo get_template_directory_uri();?>/images/moon.png" />
+<meta name="twitter:title" content="<?= get_bloginfo('name'); ?>" />
+<meta name="twitter:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
+<meta name="twitter:image" content="<?= get_template_directory_uri(); ?>/images/moon.png" />
 
 
 	</head>
@@ -41,7 +41,7 @@
 			}
 		</script>
 		<script type="text/javascript">
-			var template_directory_uri = "<?php echo get_template_directory_uri(); ?>";
+			var template_directory_uri = "<?= get_template_directory_uri(); ?>";
 		</script>
 		<div id="main-container" class="wrapper-page bg-picture">
 		<main class="page-main">
@@ -75,10 +75,10 @@
 			</div>
 		</div>
 		<div class="menu">
-			<h2>Proyecto</h2><h2>Nimizuela</h2>
+			<h2><?= pll__('Title Line 1'); ?></h2><h2><?= pll__('Title Line 2'); ?></h2>
 			<ul id="language-selector">
-				<li><a href="<?php bloginfo('url'); ?>/blog/">Español</a></li>
-				<li><a href="<?php bloginfo('url'); ?>/en/blog-2/">English</a></li>
+				<li><a href="<?= get_bloginfo('url'); ?>/blog/">Español</a></li>
+				<li><a href="<?= get_bloginfo('url'); ?>/en/blog-2/">English</a></li>
 			</ul>
 		</div>
 		<div>

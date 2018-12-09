@@ -3,6 +3,8 @@ add_theme_support( 'post-thumbnails' );
 
 add_action('init', function() {
 	/* Translation strings */
+	pll_register_string('mytheme-title-1', 'Title Line 1');
+	pll_register_string('mytheme-title-2', 'Title Line 2');
 	pll_register_string('mytheme-description-1', 'Desription Line 1');
 	pll_register_string('mytheme-description-2', 'Desription Line 2');
 	pll_register_string('mytheme-since', 'Since');
@@ -31,7 +33,7 @@ add_action('init', function() {
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		)
-	);	
+	);
 });
 
 add_filter( 'excerpt_length', function ( $length ) {
