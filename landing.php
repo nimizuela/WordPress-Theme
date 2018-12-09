@@ -49,9 +49,9 @@
 			</main>
 		</div>
 		<div class="header">
-			<div id="faucet" style="display: none;">
+			<div id="faucet">
 				<div id="follow">
-					<a href="https://faucet.nimizuela.tk"><?= pll__('Follow us on Twitter'); ?></a> <?= pll__('and get free NIM!'); ?><br>
+					<a href="https://faucet.nimizuela.org"><?= pll__('Follow us on Twitter'); ?></a> <?= pll__('and get free NIM!'); ?><br>
 					<a href="https://nimizuela.org/es/2018/08/04/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web.html" target="_blank"><?= pll__('...or create a Nimiq account to receive them if you haven\'t done so.'); ?></a>
 				</div>
 <!--
@@ -107,15 +107,6 @@
 		vUV = 0.75 * uv;
 		vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
 		gl_Position = projectionMatrix * mvPosition;
-		}
-	</script>
-	<script type="text/javascript">
-		window.onload = function() {
-			$.get("https://extreme-ip-lookup.com/json/", function(response) {
-				if (response.countryCode == "VE") {
-					$("#faucet").show();
-				}
-			}, "jsonp");
 		}
 	</script>
 <!--
