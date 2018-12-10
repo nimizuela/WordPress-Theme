@@ -3072,6 +3072,10 @@ input, select, textarea {
 				display: block;
 			}
 
+				#header > .inner li {
+					display: inline-block;
+				}
+			
 				#header h1 {
 					font-size: 1.75em;
 				}
