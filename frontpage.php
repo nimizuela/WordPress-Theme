@@ -52,7 +52,7 @@
 			<div id="faucet">
 				<div id="follow">
 					<a href="https://faucet.nimizuela.org"><?= pll__('Follow us on Twitter'); ?></a> <?= pll__('and get free NIM!'); ?><br>
-					<a href="https://nimizuela.org/es/2018/08/04/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web.html" target="_blank"><?= pll__('...or create a Nimiq account to receive them if you haven\'t done so.'); ?></a>
+					<a href="https://nimizuela.org/<?= substr(get_bloginfo('language'), 0, 2) == 'es' ? '2018/12/10/nimiq-la-primera-cadena-de-bloques-basada-en-el-navegador-web/' : 'en/2018/12/10/nimiq-the-first-web-browser-based-blockchain/'; ?>" target="_blank"><?= pll__('...or create a Nimiq account to receive them if you haven\'t done so.'); ?></a>
 				</div>
 <!--
 				<div id="follow">

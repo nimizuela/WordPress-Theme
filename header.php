@@ -4,7 +4,7 @@
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-<html lang="es">
+<html lang="<?= substr(get_bloginfo('language'), 0, 2); ?>">
 	<head>
 		<title><?= get_bloginfo('name'); ?></title>
 <meta charset="utf-8" />
@@ -20,22 +20,11 @@
 <link rel="icon" href="<?= get_template_directory_uri(); ?>/images/icons/48.png" sizes="48x48" type="image/png">
 <link rel="icon" href="<?= get_template_directory_uri(); ?>/images/icons/128.png" sizes="128x128" type="image/png">
 <link rel="icon" href="<?= get_template_directory_uri(); ?>/images/icons/windows.ico" sizes="16x16 32x32 48x48" type="image/icon">
-
-
-
-
-
-<link rel="alternate" hreflang="en" href="/blog.html" />
-
-
-
-
+<link rel="alternate" hreflang="<?= substr(get_bloginfo('language'), 0, 2) == 'es' ? 'en' : 'es'; ?>" href="/blog.html" />
 <link rel="author" type="text/plain" href="/humans.txt" />
+<meta property="fb:app_id"       content="644672675906757" />
 
-
-		<meta property="fb:app_id"       content="644672675906757" />
-
-		<!-- Open Graph -->
+<!-- Open Graph -->
 <meta property="og:type" content="article" />
 <meta property="og:title" content="<?= get_bloginfo('name'); ?>" />
 <meta property="og:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
@@ -49,7 +38,6 @@
 <meta name="twitter:title" content="<?= get_bloginfo('name'); ?>" />
 <meta name="twitter:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
 <meta name="twitter:image" content="<?= get_template_directory_uri(); ?>/images/logo.png" />
-
 
 	</head>
 	<body class="is-preload">
