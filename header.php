@@ -76,11 +76,9 @@
 		</div>
 	</header>
 
-		<!--
 		<div id=lang-selector>
 			<?php dynamic_sidebar('primary'); ?>
 		</div>
-		-->
 
 		<!-- Main -->
 			<div id="main">
