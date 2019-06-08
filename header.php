@@ -39,6 +39,8 @@
 <meta name="twitter:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
 <meta name="twitter:image" content="<?= get_template_directory_uri(); ?>/images/logo.png" />
 
+<?php wp_head(); ?>
+
 	</head>
 	<body class="is-preload">
 
