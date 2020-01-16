@@ -6,7 +6,7 @@
 -->
 <html lang="<?= substr(get_bloginfo('language'), 0, 2); ?>">
 	<head>
-		<title><?= get_bloginfo('name'); ?></title>
+		<title><?php wp_title(); ?></title>
 <meta charset="utf-8" />
 <meta name="description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />

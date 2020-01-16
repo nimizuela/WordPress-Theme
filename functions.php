@@ -62,4 +62,8 @@ add_filter( 'wp_get_nav_menu_items', function ( $items, $menu, $args ) {
 }, null, 3 );
 */
 
+add_action( 'after_setup_theme', function () {
+	add_theme_support( 'title-tag' );
+});
+
 ?>
