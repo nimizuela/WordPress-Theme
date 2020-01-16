@@ -50,6 +50,7 @@ add_filter( 'excerpt_more', function ( $more ) {
 });
 
 /* Exclude current page or post from the menu */
+/*
 add_filter( 'wp_get_nav_menu_items', function ( $items, $menu, $args ) {
 	global $post;
 	if (is_object($post)) {
@@ -59,5 +60,6 @@ add_filter( 'wp_get_nav_menu_items', function ( $items, $menu, $args ) {
 	}
     return $items;
 }, null, 3 );
+*/
 
 ?>

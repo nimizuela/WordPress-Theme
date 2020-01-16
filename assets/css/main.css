@@ -2637,6 +2637,10 @@ input, select, textarea {
 			list-style-type: none;
 		}
 
+		#header .inner .current_page_item > a {
+			border-bottom: solid 2px;
+		}
+
 
 /* Footer */
 
