@@ -13,7 +13,7 @@
 		<script type="text/javascript" src='https://www.google.com/recaptcha/api.js?hl=es-419'></script>
 		<!-- Main -->
 		<link type="text/css" rel="stylesheet" href="<?= get_template_directory_uri(); ?>/assets/css/moon.css" />
-		<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/moon.js"></script>
+		<!--<script type="text/javascript" src="<?= get_template_directory_uri(); ?>/assets/js/moon.js"></script>-->
 		<!-- Analytics -->
 
 		<!-- Socials -->
@@ -44,8 +44,12 @@
 			var template_directory_uri = "<?= get_template_directory_uri(); ?>";
 		</script>
 		<div id="main-container" class="wrapper-page bg-picture">
-		<main class="page-main">
-		<div class="js-flag-canvas"></div>
+			<div class="flag-container">
+				<video autoplay muted loop class="flag">
+					<source src="<?= get_template_directory_uri(); ?>/images/flag.mp4" type="video/mp4">
+				</video>
+			</div>
+			<main class="page-main">
 			</main>
 		</div>
 		<div class="header">

@@ -162,3 +162,40 @@ input[type="text"] {
 		background-image : url('../../images/moon-landing-1600x1200px.jpg');
 	}
 }
+
+/* //// Waving Flag //// */
+
+.flag-container {
+	position: relative;
+	left: 0;
+    top: 31.667%;
+	width: 100%;
+	height: 17.167%;
+}
+
+.flag {
+	position: relative;
+    left: 50%;
+	top: 0;
+    height: 100%;
+    transform: translateX(-6.552%);
+}
+
+@media only screen and (min-aspect-ratio : 8/6) {
+	.flag-container {
+		position: relative;
+		left: 48.813%;
+		top: unset;
+		width: 18.2%;
+		height: 100%;
+	}
+
+	.flag {
+		position: relative;
+		left: unset;
+		top: 50%;
+		width: 100%;
+		height: unset;
+    	transform: translateY(-106.796%);
+	}
+}
