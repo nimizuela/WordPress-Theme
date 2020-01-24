@@ -4,7 +4,15 @@
 		<section class="post-container">
 			<div class="post-thumb"><?php if ( function_exists( 'add_theme_support' ) ) the_post_thumbnail(); ?></div>
 			<div class="post-content">
-				<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a>
+				<?php
+				if (is_sticky($post->ID)) {
+				?>
+					<img src="<?= get_template_directory_uri() . "/images/pin.png" ?>">
+				<?php
+				}
+				?>
+				</h2>
 				<div>
 					<?php the_excerpt(); ?>
 				</div>
