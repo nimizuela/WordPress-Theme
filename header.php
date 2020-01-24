@@ -30,14 +30,14 @@
 <meta property="og:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
 <meta property="og:site_name" content="<?= get_bloginfo('name'); ?>" />
 <meta property="og:url" content="/es/blog.html" />
-<meta property="og:image" content="<?= get_template_directory_uri(); ?>/images/logo.png" />
+<meta property="og:image" content="<?= has_post_thumbnail() ? get_the_post_thumbnail_url($post, 'full') : (get_template_directory_uri() . "/images/logo.png") ?>" />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:site" content="@nimizuela" />
 <meta name="twitter:title" content="<?= get_bloginfo('name'); ?>" />
 <meta name="twitter:description" content="<?= get_bloginfo('name'); ?> <?= get_bloginfo('description'); ?>" />
-<meta name="twitter:image" content="<?= get_template_directory_uri(); ?>/images/logo.png" />
+<meta name="twitter:image" content="<?= has_post_thumbnail() ? get_the_post_thumbnail_url($post, 'full') : (get_template_directory_uri() . "/images/logo.png") ?>" />
 
 <?php wp_head(); ?>
 
